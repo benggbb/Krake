@@ -1,0 +1,17 @@
+hi(a){
+    if(a == 1)
+        return true;
+}
+
+for(i: range(1,10){ # checks if code change creates a better working meethode
+    test = hi.get(0).ifcon({{a == i}}):
+    if(test == expected){
+        hi.get(0).chifcon({{a == i}});
+
+}
+
+catch(err) {        #test self errorhandling
+    newcode = err.line.suggest():
+    print(out = test.correct(newcode));
+
+};

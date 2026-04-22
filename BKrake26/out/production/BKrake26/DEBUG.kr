@@ -1,0 +1,19 @@
+def valA() { 10; }
+def valB() { 20; }
+def step1() { (valA() * valB()) / 2; }
+def step2() { step1() + (valA() * 5); }
+def mutate() { global = step2() + 100; global; }
+
+x = 1;
+y = 2;
+def complex() { x = x + y; y = x + y; x + y; }
+
+a = mutate();
+b = complex();
+c = (a + b) * (def joker() { 2; } joker());
+
+x = 10;
+y = 10;
+d = complex();
+
+finalResult = (a + b + c + d) / (def div() { 10; } div());
